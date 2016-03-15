@@ -1,7 +1,7 @@
 __author__ = 'KG'
 from datetime import datetime
 
-
+ 
 junk = datetime.now().second
 pick = "0123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789"[junk]
 junk = datetime.now().minute / datetime.now().second
