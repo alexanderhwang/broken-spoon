@@ -1,7 +1,7 @@
 __author__ = 'KG'
 print("Hello.")
 immData = "" # Immediate data
-while (immData != "Done."):
+while (immData != "Done." and immData != "Finished." and immData != "End."):
     immData = input("Response: ")
     immLen = len(immData)
     if immLen == 0:
