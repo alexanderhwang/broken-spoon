@@ -1,5 +1,4 @@
 __author__ = 'KG'
-
 # Initial greeting needs work.
 
 print("Hello.")
