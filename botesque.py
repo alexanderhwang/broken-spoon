@@ -26,6 +26,7 @@ while (immData != "Done." and immData != "Finished." and immData != "End."):
     if immData == "That is a greeting." or immData == "That's a greeting.":
         flags.extend("1")
         flagData.append(prevData)
+        print("Oh okay. " + prevData)
     index = 0
     for x in flagData:
         if (x == immData):
