@@ -1,11 +1,10 @@
 __author__ = 'KG'
-# Initial greeting needs work.
 
 print("Hello.")
 immData = "" # Immediate data
 prevData = "" # Previous data
-flags = ["1"] # 1 = greeting
-flagData = ["Hi."]
+flags = ["1", "2"] # 1 = greeting, # 2 = farewell
+flagData = ["Hi.", "Bye."]
 while (immData != "Done." and immData != "Finished." and immData != "End."):
     immData = input("Response: ")
     immLen = len(immData)
@@ -27,10 +26,17 @@ while (immData != "Done." and immData != "Finished." and immData != "End."):
         flags.extend("1")
         flagData.append(prevData)
         print("Oh okay. " + prevData)
+    elif immData == "That is a farewell." or immData == "That's a farewell.":
+        flags.extend("2")
+        flagData.append(prevData)
+        print("Oh okay.")
     index = 0
     for x in flagData:
         if (x == immData):
             if (flags[index] == "1"):
-                print((flagData[index])[:(len(prevData) - 1)] + " to you too.")
+                print((flagData[index])[:(len(flagData[index]) - 1)] + " to you too.")
+            if (flags[index] == "2"):
+                print(flagData[index])
+                immData = "Done."
         index += 1
     prevData = immData
