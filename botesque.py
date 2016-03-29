@@ -3,8 +3,8 @@ mol = "\033[1mMol: \033[0m"
 print(mol + "Hello.")
 immData = "" # Immediate data
 prevData = "" # Previous data
-flags = ["1", "2"] # 1 = greeting, # 2 = farewell
-flagData = ["Hi.", "Bye."]
+flags = ["1", "1", "1", "2", "2", "2"] # 1 = greeting, # 2 = farewell
+flagData = ["Hi.", "Hello.", "Hey.", "Bye.", "Goodbye.", "Farewell."]
 while (immData != "Done." and immData != "Finished." and immData != "End."):
     immData = input("Response: ")
     immLen = len(immData)
@@ -22,11 +22,11 @@ while (immData != "Done." and immData != "Finished." and immData != "End."):
         immData += "."
     print(immData)
     print()
-    if immData == "That is a greeting." or immData == "That's a greeting.":
+    if immData == "That is a greeting." or immData == "That's a greeting." or immData == "That is a hello." or immData == "That's a hello.":
         flags.extend("1")
         flagData.append(prevData)
         print(mol + "Oh okay. " + prevData)
-    elif immData == "That is a farewell." or immData == "That's a farewell.":
+    elif immData == "That is a farewell." or immData == "That's a farewell." or immData == "That is a goodbye." or immData == "That's a goodbye.":
         flags.extend("2")
         flagData.append(prevData)
         print(mol + "Oh okay.")
