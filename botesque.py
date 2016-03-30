@@ -1,10 +1,13 @@
 __author__ = 'KG'
+
+# Ignore ", Mol", check other names
+
 mol = "\033[1mMol: \033[0m"
 print(mol + "Hello.")
 immData = "" # Immediate data
 prevData = "" # Previous data
-flags = ["1", "1", "1", "2", "2", "2"] # 1 = greeting, # 2 = farewell
-flagData = ["Hi.", "Hello.", "Hey.", "Bye.", "Goodbye.", "Farewell."]
+flags = ["1", "1", "1", "1", "2", "2", "2"] # 1 = greeting, # 2 = farewell
+flagData = ["Greetings.", "Hi.", "Hello.", "Hey.", "Bye.", "Goodbye.", "Farewell."]
 while (immData != "Done." and immData != "Finished." and immData != "End."):
     immData = input("Response: ")
     immLen = len(immData)
@@ -22,11 +25,11 @@ while (immData != "Done." and immData != "Finished." and immData != "End."):
         immData += "."
     print(immData)
     print()
-    if immData == "That is a greeting." or immData == "That's a greeting." or immData == "That is a hello." or immData == "That's a hello.":
+    if immData == "That is a greeting." or immData == "That's a greeting." or immData == "That is a hello." or immData == "That's a hello." or immData == "That means hello." or immData == "That means hi.":
         flags.extend("1")
         flagData.append(prevData)
         print(mol + "Oh okay. " + prevData)
-    elif immData == "That is a farewell." or immData == "That's a farewell." or immData == "That is a goodbye." or immData == "That's a goodbye.":
+    elif immData == "That is a farewell." or immData == "That's a farewell." or immData == "That is a goodbye." or immData == "That's a goodbye." or immData == "That means goodbye." or immData == "That means bye.":
         flags.extend("2")
         flagData.append(prevData)
         print(mol + "Oh okay.")
