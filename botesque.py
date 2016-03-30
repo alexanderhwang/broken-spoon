@@ -6,6 +6,7 @@ mol = "\033[1mMol: \033[0m"
 print(mol + "Hello.")
 immData = "" # Immediate data
 prevData = "" # Previous data
+response = False
 flags = ["1", "1", "1", "1", "2", "2", "2"] # 1 = greeting, # 2 = farewell
 flagData = ["Greetings.", "Hi.", "Hello.", "Hey.", "Bye.", "Goodbye.", "Farewell."]
 while (immData != "Done." and immData != "Finished." and immData != "End."):
@@ -37,9 +38,14 @@ while (immData != "Done." and immData != "Finished." and immData != "End."):
     for x in flagData:
         if (x == immData):
             if (flags[index] == "1"):
+                response = True
                 print(mol + (flagData[index])[:(len(flagData[index]) - 1)] + " to you too.")
             if (flags[index] == "2"):
+                response = True
                 print(mol + flagData[index])
                 immData = "Done."
         index += 1
+    if (response == False):
+        print(mol + "Sorry, what?")
     prevData = immData
+    response = False
