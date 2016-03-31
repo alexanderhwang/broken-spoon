@@ -1,6 +1,6 @@
 __author__ = 'KG'
 
-# Ignore ", Mol", check other names
+# Ignore ", Mol", check other names, deal with confuse
 
 mol = "\033[1mMol: \033[0m"
 print(mol + "Hello.")
@@ -21,8 +21,16 @@ while (immData != "Done." and immData != "Finished." and immData != "End."):
     while immData[immLen - 1] == " " and immLen > 0:
         immData = immData[:(immLen - 1)]
         immLen -= 1
+    immDataTemp = immData.lower()
+    ##
+    if ", mol" in immDataTemp:
+        immData.replace(", mol", "")
+        immData.replace(", Mol", "")
+    if "mol, " in immDataTemp:
+        immData.replace("mol, ", "")
+        immData.replace("Mol, ", "")
     if immData[0].islower():
-        immData = immData.capitalize()
+        immData = immData[0].capitalize() + immData[1:]
     if immData[immLen - 1] != "." and immData[immLen - 1] != "!" and immData[immLen - 1] != "?":
         immData += "."
     print(immData)
