@@ -7,6 +7,7 @@ print(mol + "Hello.")
 immData = "" # Immediate data
 prevData = "" # Previous data
 response = False
+confuse = False
 flags = ["1", "1", "1", "1", "2", "2", "2"] # 1 = greeting, # 2 = farewell
 flagData = ["Greetings.", "Hi.", "Hello.", "Hey.", "Bye.", "Goodbye.", "Farewell."]
 while (immData != "Done." and immData != "Finished." and immData != "End."):
@@ -29,10 +30,12 @@ while (immData != "Done." and immData != "Finished." and immData != "End."):
     if immData == "That is a greeting." or immData == "That's a greeting." or immData == "That is a hello." or immData == "That's a hello." or immData == "That means hello." or immData == "That means hi.":
         flags.extend("1")
         flagData.append(prevData)
+        response = True
         print(mol + "Oh okay. " + prevData)
     elif immData == "That is a farewell." or immData == "That's a farewell." or immData == "That is a goodbye." or immData == "That's a goodbye." or immData == "That means goodbye." or immData == "That means bye.":
         flags.extend("2")
         flagData.append(prevData)
+        response = True
         print(mol + "Oh okay.")
     index = 0
     for x in flagData:
@@ -46,6 +49,7 @@ while (immData != "Done." and immData != "Finished." and immData != "End."):
                 immData = "Done."
         index += 1
     if (response == False):
+        confuse = True
         print(mol + "Sorry, what?")
     prevData = immData
     response = False
