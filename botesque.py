@@ -23,12 +23,11 @@ while (immData != "Done." and immData != "Finished." and immData != "End."):
         immLen -= 1
     immDataTemp = immData.lower()
     ##
-    if ", mol" in immDataTemp:
-        immData.replace(", mol", "")
-        immData.replace(", Mol", "")
-    if "mol, " in immDataTemp:
-        immData.replace("mol, ", "")
-        immData.replace("Mol, ", "")
+    #if ", mol" in immDataTemp:
+        # Determine init/end of substring, remove?
+    #if "mol, " in immDataTemp:
+        #immData.replace("mol, ", "")
+        #immData.replace("Mol, ", "")
     if immData[0].islower():
         immData = immData[0].capitalize() + immData[1:]
     if immData[immLen - 1] != "." and immData[immLen - 1] != "!" and immData[immLen - 1] != "?":
