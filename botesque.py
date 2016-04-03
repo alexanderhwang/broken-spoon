@@ -22,6 +22,14 @@ while (immData != "Done." and immData != "Finished." and immData != "End."):
         immData = immData[:(immLen - 1)]
         immLen -= 1
     immDataTemp = immData.lower()
+    if "mol " in immDataTemp:
+        valTemp = immDataTemp.find("mol ")
+        immData = immData[:valTemp] + immData[(valTemp + 5):]
+        immLen -= 4
+    if " mol" in immDataTemp:
+        valTemp = immDataTemp.find(" mol")
+        immData = immData[:valTemp] + immData[(valTemp + 5):]
+        immLen -= 4
     if ", mol" in immDataTemp:
         valTemp = immDataTemp.find(", mol")
         immData = immData[:valTemp] + immData[(valTemp + 5):]
