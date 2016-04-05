@@ -1,6 +1,6 @@
 __author__ = 'KG'
 
-# Ignore ", Mol", check other names, deal with confuse
+# check other names, deal with confuse
 
 mol = "\033[1mMol: \033[0m"
 print(mol + "Hello.")
@@ -8,8 +8,8 @@ immData = "" # Immediate data
 prevData = "" # Previous data
 response = False
 confuse = False
-flags = ["1", "1", "1", "1", "2", "2", "2"] # 1 = greeting, # 2 = farewell
-flagData = ["Greetings.", "Hi.", "Hello.", "Hey.", "Bye.", "Goodbye.", "Farewell."]
+flags = ["1", "1", "1", "1", "2", "2", "2", "3"] # 1 = greeting, # 2 = farewell, +3 = name
+flagData = ["Greetings.", "Hi.", "Hello.", "Hey.", "Bye.", "Goodbye.", "Farewell.", "Alex."]
 while (immData != "Done." and immData != "Finished." and immData != "End."):
     immData = input("Response: ")
     immLen = len(immData)
