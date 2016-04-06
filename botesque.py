@@ -8,8 +8,8 @@ immData = "" # Immediate data
 prevData = "" # Previous data
 response = False
 confuse = False
-flags = ["1", "1", "1", "1", "2", "2", "2", "3"] # 1 = greeting, # 2 = farewell, +3 = name
-flagData = ["Greetings.", "Hi.", "Hello.", "Hey.", "Bye.", "Goodbye.", "Farewell.", "Alex."]
+flags = ["1", "1", "1", "1", "2", "2", "2", "3", "3"] # 1 = greeting, # 2 = farewell, +3 = name
+flagData = ["Greetings.", "Hi.", "Hello.", "Hey.", "Bye.", "Goodbye.", "Farewell.", "Alex.", "Jasmine."]
 while (immData != "Done." and immData != "Finished." and immData != "End."):
     immData = input("Response: ")
     immLen = len(immData)
