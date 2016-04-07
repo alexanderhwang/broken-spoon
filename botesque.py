@@ -8,8 +8,8 @@ immData = "" # Immediate data
 prevData = "" # Previous data
 response = False
 confuse = False
-flags = ["1", "1", "1", "1", "2", "2", "2", "3", "3"] # 1 = greeting, # 2 = farewell, +3 = name
-flagData = ["Greetings.", "Hi.", "Hello.", "Hey.", "Bye.", "Goodbye.", "Farewell.", "Alex.", "Jasmine."]
+flags = ["1", "1", "1", "1", "2", "2", "2"] # 1 = greeting, # 2 = farewell, # 3 = name
+flagData = ["Greetings.", "Hi.", "Hello.", "Hey.", "Bye.", "Goodbye.", "Farewell."]
 while (immData != "Done." and immData != "Finished." and immData != "End."):
     immData = input("Response: ")
     immLen = len(immData)
@@ -54,6 +54,11 @@ while (immData != "Done." and immData != "Finished." and immData != "End."):
         flagData.append(prevData)
         response = True
         print(mol + "Oh okay.")
+    elif "My name is " in immDataTemp:
+        flags.extend("3")
+        flagData.append(immDataTemp[11:])
+        response = True
+        print(mol + "Oh okay. I'll keep that in mind.")
     index = 0
     for x in flagData:
         if (x == immData):
