@@ -1,0 +1,59 @@
+<html>
+	<head>
+	<meta charset="utf-8">
+	<title>Little Things</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/screen.css" rel="stylesheet">
+	
+	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+	<!--<script> 							-->
+	<!--$(function(){						-->
+	<!--  $("#header").load("header.html"); -->
+	<!--  $("#footer").load("footer.html"); -->
+	<!--});									-->
+	<!--</script> 							-->
+	<script>
+		function chg1() { 
+		$('#prat').attr('src', 'http://ic.pics.livejournal.com/kutera/9142121/111734/111734_600.png'); 
+		$('#ren').attr('src', 'http://ic.pics.livejournal.com/kutera/9142121/111934/111934_600.png'); 
+		$('#win').attr('src', 'http://ic.pics.livejournal.com/kutera/9142121/112659/112659_600.png'); 
+		$('#al').attr('src', 'http://ic.pics.livejournal.com/kutera/9142121/113250/113250_600.png'); 
+		} 
+		function chg2() { 
+		$('#prat').attr('src', 'http://ic.pics.livejournal.com/kutera/9142121/111421/111421_600.png'); 
+		$('#ren').attr('src', 'http://ic.pics.livejournal.com/kutera/9142121/112309/112309_600.png'); 
+		$('#win').attr('src', 'http://ic.pics.livejournal.com/kutera/9142121/112387/112387_600.png'); 
+		$('#al').attr('src', 'http://ic.pics.livejournal.com/kutera/9142121/113453/113453_600.png'); 
+		} 
+		function StartAnimation() { setTimeout(chg1, 1);
+		setTimeout(chg2, 1000);
+		setTimeout(StartAnimation, 2000);
+		} 
+		StartAnimation(); // start it off
+	</script>
+	</head>
+	<body>
+	<!-- HEADER-->
+	<div id="header"></div>
+	<!--- End Of Header-->
+
+    <fieldset>
+		<p>
+			<h1 class="black">Little Things</h1>
+			<label>What's it for? Nobody knows!</label><br>
+			<h2>Pratik</h2>
+			<img id="prat" src="http://ic.pics.livejournal.com/kutera/9142121/111734/111734_600.png" width="50px"><br>
+			<h2>Alex</h2>
+			<img id="al" src="http://ic.pics.livejournal.com/kutera/9142121/113250/113250_600.png" width="50px"><br>
+			<h2>Winnie</h2>
+			<img id="win" src="http://ic.pics.livejournal.com/kutera/9142121/112659/112659_600.png" width="50px"><br>
+			<h2>Rene</h2>
+			<img id="ren" src="http://ic.pics.livejournal.com/kutera/9142121/111934/111934_600.png" width="50px"><br>
+			
+		</p>
+	</fieldset>
+	<!-- START OF FOOTER-->
+	<div id="footer"></div>
+	<!-- END OF FOOTER-->
+	</body>
+</html>
