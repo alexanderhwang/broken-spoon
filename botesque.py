@@ -54,11 +54,28 @@ while (immData != "Done." and immData != "Finished." and immData != "End."):
         flagData.append(prevData)
         response = True
         print(mol + "Oh okay.")
-    elif "My name is " in immDataTemp:
+    elif "My name is " in immData:
         flags.extend("3")
         flagData.append(immDataTemp[11:])
         response = True
         print(mol + "Oh okay. I'll keep that in mind.")
+    elif "My name's " in immData:
+        flags.extend("3")
+        flagData.append(immDataTemp[10:])
+        response = True
+        print(mol + "Oh okay. I'll keep that in mind.")
+    elif "What's my name?" in immData:
+        response = True
+        name = ""
+        index = 0
+        for x in flags:
+            if (x == "3"):
+                name = flagData[index]
+            index += 1
+        if name != "":
+            print(mol + "Your name is " + name + ".")
+        else:
+            print(mol + "I don't know what your name is.")
     index = 0
     for x in flagData:
         if (x == immData):
