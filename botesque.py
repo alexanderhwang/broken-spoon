@@ -64,6 +64,11 @@ while (immData != "Done." and immData != "Finished." and immData != "End."):
         flagData.append(immDataTemp[10:])
         response = True
         print(mol + "Oh okay. I'll keep that in mind.")
+    elif "Call me " in immData:
+        flags.extend("3")
+        flagData.append(immDataTemp[8:])
+        response = True
+        print(mol + "Oh okay. I'll keep that in mind.")
     elif "I am " in immData:
         flags.extend("3")
         flagData.append(immDataTemp[5:])
