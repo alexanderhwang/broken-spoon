@@ -56,27 +56,27 @@ while (immData != "Done." and immData != "Finished." and immData != "End."):
         print(mol + "Oh okay.")
     elif "My name is " in immData:
         flags.extend("3")
-        flagData.append(immDataTemp[11:])
+        flagData.append(immDataTemp[11:].capitalize())
         response = True
         print(mol + "Oh okay. I'll keep that in mind.")
     elif "My name's " in immData:
         flags.extend("3")
-        flagData.append(immDataTemp[10:])
+        flagData.append(immDataTemp[10:].capitalize())
         response = True
         print(mol + "Oh okay. I'll keep that in mind.")
     elif "Call me " in immData:
         flags.extend("3")
-        flagData.append(immDataTemp[8:])
+        flagData.append(immDataTemp[8:].capitalize())
         response = True
         print(mol + "Oh okay. I'll keep that in mind.")
     elif "I am " in immData:
         flags.extend("3")
-        flagData.append(immDataTemp[5:])
+        flagData.append(immDataTemp[5:].capitalize())
         response = True
         print(mol + "Oh okay. I'll keep that in mind.")
     elif "I'm " in immData:
         flags.extend("3")
-        flagData.append(immDataTemp[4:])
+        flagData.append(immDataTemp[4:].capitalize())
         response = True
         print(mol + "Oh okay. I'll keep that in mind.")
     elif "What's my name?" in immData:
