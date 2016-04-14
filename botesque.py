@@ -90,7 +90,7 @@ while (immData != "Done." and immData != "Finished." and immData != "End."):
         if name != "":
             print(mol + "Your name is " + name + ".")
         else:
-            print(mol + "I don't know what your name is.")
+            print(mol + "I'm sorry, I don't know what your name is.")
     index = 0
     for x in flagData:
         if (x == immData):
