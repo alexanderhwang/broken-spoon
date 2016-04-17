@@ -57,7 +57,7 @@ while (immData != "Done." and immData != "Finished." and immData != "End."):
     elif "My name is " in immData:
         index = 0
         for x in flagData:
-            if (x == immData):
+            if x == immData:
                 if (flags[index] == "3"):
                     flags.remove("3")
                     del flagData[index]
@@ -69,7 +69,7 @@ while (immData != "Done." and immData != "Finished." and immData != "End."):
     elif "My name's " in immData:
         index = 0
         for x in flagData:
-            if (x == immData):
+            if x == immData:
                 if (flags[index] == "3"):
                     flags.remove("3")
                     del flagData[index]
@@ -81,7 +81,7 @@ while (immData != "Done." and immData != "Finished." and immData != "End."):
     elif "Call me " in immData:
         index = 0
         for x in flagData:
-            if (x == immData):
+            if x == immData:
                 if (flags[index] == "3"):
                     flags.remove("3")
                     del flagData[index]
@@ -93,7 +93,7 @@ while (immData != "Done." and immData != "Finished." and immData != "End."):
     elif "I am " in immData:
         index = 0
         for x in flagData:
-            if (x == immData):
+            if x == immData:
                 if (flags[index] == "3"):
                     flags.remove("3")
                     del flagData[index]
@@ -105,7 +105,7 @@ while (immData != "Done." and immData != "Finished." and immData != "End."):
     elif "I'm " in immData:
         index = 0
         for x in flagData:
-            if (x == immData):
+            if x == immData:
                 if (flags[index] == "3"):
                     flags.remove("3")
                     del flagData[index]
@@ -128,7 +128,7 @@ while (immData != "Done." and immData != "Finished." and immData != "End."):
             print(mol + "I'm sorry, I don't know what your name is.")
     index = 0
     for x in flagData:
-        if (x == immData):
+        if x == immData:
             if (flags[index] == "1"):
                 response = True
                 print(mol + (flagData[index])[:(len(flagData[index]) - 1)] + " to you too.")
