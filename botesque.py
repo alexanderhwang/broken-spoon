@@ -114,7 +114,7 @@ while (immData != "Done." and immData != "Finished." and immData != "End."):
         flagData.append(immDataTemp[4:].capitalize())
         response = True
         print(mol + "Oh okay. I'll keep that in mind.")
-    elif "What's my name?" in immData or "Who am I?" in immData:
+    elif "What's my name?" in immData or "what is my name?" in immData or "Who am I?" in immData:
         response = True
         name = ""
         index = 0
