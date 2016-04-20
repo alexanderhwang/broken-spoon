@@ -1,0 +1,33 @@
+@()
+
+@main("Welcome to Play") {
+    <script type='text/javascript' src='@routes.Assets.at("javascripts/index.js")'></script>
+
+    <p id="display"></p>
+
+    <ul id="persons"></ul>
+
+    <form method="POST" action="@routes.Application.addPerson()">
+        <input type="text" name="name"/>
+        <button>Add Person</button>
+    </form>
+
+
+    <ul id="things"></ul>
+
+    <form method="POST" action="@routes.Test.addThing()">
+        <input type="text" name="thingName"/>
+        <button>Add Thing</button>
+    </form>
+
+    <ul id="values"></ul>
+
+    <form method="POST" action="@routes.Test2.valueSub()">
+        <input type="text" name="valData" placeholder="x"/>
+        <button>Sub</button>
+    </form>
+    <form method="POST" action="@routes.Test2.valueAdd()">
+        <input type="text" name="valData" placeholder="x"/>
+        <button>Add</button>
+    </form>
+}
