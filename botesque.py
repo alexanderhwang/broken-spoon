@@ -140,7 +140,13 @@ while (immData != "Done." and immData != "Finished." and immData != "End."):
                 print(mol + (flagData[index])[:(len(flagData[index]) - 1)] + " to you too" + nameInsert + ".")
             if (flags[index] == "2"):
                 response = True
-                print(mol + flagData[index])
+                nameInsert = ""
+                index2 = 0
+                for y in flags:
+                    if (y == "3"):
+                        nameInsert = ", " + flagData[index2]
+                    index2 += 1
+                print(mol + (flagData[index])[:(len(flagData[index]) - 1)] + nameInsert + ".")
                 immData = "Done."
         index += 1
     if (response == False):
