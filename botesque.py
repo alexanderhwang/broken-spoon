@@ -55,17 +55,19 @@ while (immData != "Done." and immData != "Finished." and immData != "End."):
         response = True
         print(mol + "Oh okay.")
     elif "My name is " in immData:
+        responseA = "Oh okay. "
         index = 0
         for x in flagData:
             if x == immData:
                 if (flags[index] == "3"):
                     flags.remove("3")
+                    responseA = "Oh, I thought your name was " + flagData[index]
                     del flagData[index]
             index += 1
         flags.extend("3")
         flagData.append(immDataTemp[11:].capitalize())
         response = True
-        print(mol + "Oh okay. I'll keep that in mind.")
+        print(mol + responseA + "I'll keep that in mind.")
     elif "My name's " in immData:
         index = 0
         for x in flagData:
