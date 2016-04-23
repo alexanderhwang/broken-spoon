@@ -69,6 +69,7 @@ while (immData != "Done." and immData != "Finished." and immData != "End."):
         response = True
         print(mol + responseA + "I'll keep that in mind.")
     elif "My name's " in immData:
+        responseA = "Oh okay. "
         index = 0
         for x in flagData:
             if x == immData:
@@ -81,6 +82,7 @@ while (immData != "Done." and immData != "Finished." and immData != "End."):
         response = True
         print(mol + "Oh okay. I'll keep that in mind.")
     elif "Call me " in immData:
+        responseA = "Oh okay. "
         index = 0
         for x in flagData:
             if x == immData:
@@ -93,6 +95,7 @@ while (immData != "Done." and immData != "Finished." and immData != "End."):
         response = True
         print(mol + "Oh okay. I'll keep that in mind.")
     elif "I am " in immData:
+        responseA = "Oh okay. "
         index = 0
         for x in flagData:
             if x == immData:
@@ -105,6 +108,7 @@ while (immData != "Done." and immData != "Finished." and immData != "End."):
         response = True
         print(mol + "Oh okay. I'll keep that in mind.")
     elif "I'm " in immData:
+        responseA = "Oh okay. "
         index = 0
         for x in flagData:
             if x == immData:
