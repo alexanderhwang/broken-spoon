@@ -1,6 +1,6 @@
 __author__ = 'KG'
 
-# check other names, deal with confuse
+# check other names, deal with confuse, fix name change
 
 mol = "\033[1mMol: \033[0m"
 print(mol + "Hello.")
